@@ -1,0 +1,20 @@
+{
+  "name": "oddjob",
+  "version": "1.0.0",
+  "description": "OddJob is an app that finds local business or individual people just like yourself who may be looking to hire someone for any work or assistance that may be need for that oddJob. This can be anywhere from business employing a job seeker for only 8 hours, or you yourself need a hand around your property.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harinderlabana/oddjob.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harinderlabana/oddjob/issues"
+  },
+  "homepage": "https://github.com/harinderlabana/oddjob#readme"
+}
