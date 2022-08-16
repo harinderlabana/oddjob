@@ -67,23 +67,30 @@ WARREN [ ]
 
 ## Routes
 
-- **_B(browse)_** - GET /users
-- **_R(read)_** - GET /users/:id
-- **_E(edit)_** - POST /users/:id
-- **_A(add)_** - POST /users
-- **_D(delete)_** - POST /users/:id/delete
+- **_R(read)_** - GET /profile/
 
+// default route will redirect to /oddjobs
 - **_B(browse)_** - GET /oddjobs
-- **_R(read)_** - GET /oddjobs/:id
 - **_E(edit)_** - POST /oddjobs/:id
 - **_A(add)_** - POST /oddjobs
 - **_D(delete)_** - POST /oddjobs/:id/delete
 
+//show current users maps (Browse)
 - **_B(browse)_** - GET /maps
 - **_R(read)_** - GET /maps/:id
 - **_E(edit)_** - POST /maps/:id
 - **_A(add)_** - POST /maps
 - **_D(delete)_** - POST /maps/:id/delete
+
+//login
+GET /login
+
+//logout
+POST /login
+
+//about, contact us NAV BAR stuff
+
+//STRETCH signup, profile edit, delete account
 
 WARREN [ ]
 
