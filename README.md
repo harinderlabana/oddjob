@@ -1,77 +1,91 @@
 # oddJob
 
+Wiki Map
+A web app that allows users to collaboratively create maps which list multiple "points". For example: "Best Places to Eat Around Town" or "Locations of Movie Scenes".
+
+Requirements:
+
+- users can see a list of the available maps
+- users can view a map
+- a map can contain many points
+- each point can have: a title, description, and image
+- authenticated users can create maps
+- authenticated users can modify maps (add, edit, remove points)
+- users can favourite a map
+- users have profiles, indicating their favourite - maps and maps they've contributed to
+  use http://leafletjs.com/ or https://developers.google.com/maps/
+
+WARREN [ ]
+
 ## What is oddJob?
 
-OddJob is an app that finds local business or individual people just like yourself who may be looking to hire someone for any work or assistance that may be need for that oddJob. This can be anywhere from business employing a job seeker for only 8 hours, or you yourself need a hand around your property.
+OddJob is an app that finds local businesses or individuals looking to hire someone for any work or assistance that may be need for that oddJob. This can be anywhere from business employing a job seeker for few hours, or you yourself need a hand for that oddJob.
+
+WARREN [ ]
 
 ## Stack
 
-\*\*sort out the front end, back end and database catagories
+Backend
 
-- NodeJS
+- Nodejs
 - Express
-- EJS
-- jQuerry
-- PostgreSQL
-- Git
+- Postgres
+
+Frontend
+
+- HTML
+- CSS
+- Javascript
+
+WARREN [ ]
 
 ## Minimum Viable Product:
 
-- Visitors should be able to see the oddJob's on the map and be able to search cities to search for more oddJob's.
-- Logged in users or will be able to see a list of cities with oddJob's available for faster navigation.
-- Logged in Job Seekers will be able to accept an oddJob posting.
-- Logged in Employers wil be able to create an oddJob listing and have its pin show up on the map for Job Seekers to accept.
+- Vistors can interact with the map, search for cities and view oddJobs pinned where available.
+- Logged in users can post, edit, delete oddjobs that they've created
+- Logged in users can favourite oddJobs to a custome map that is shareable.
+
+WARREN [ ]
 
 ## User Stories
 
-As a vistor, I can see the map and available oddJob's pinned. I can also search for a city to see available oddJob's in that area.
+- As a non-logged in user, I can interact with the map, see oddJobs pinned and search for other cities because I want look for more oddJobs.
 
-Each pin on the map has the business name, the date for the oddJob, the pay rate and time required.
+- As a logged in user, I can accept an oddJob, post an oddJob as a business or individual and I can favourite oddJobs to a custome map because I want to share these maps with others or access these oddJobs at a later time.
 
-As a logged in job seeker, I can see a list of cities with available oddJob's for faster navigation.
+- As a logged in user I can create, update or delete oddJobs I've created because I may want to change information or remove a posting.
 
-As a logged in job seeker, I can favourite certain maps for even faster navigation
-
-As a logged in employer you can create a new entry into the map list if your city does not exsist.
-
-As a logged in employer you can modify maps (add, edit, remove oddJob's)
-
-As a logged in employer amd job seeker, I have a profile showing maps I've created and maps that i've favourited.
+WARREN [ ]
 
 ## Data
 
-- Job Seekers
-- Employers
-- oddJob's
-- Maps
+- users: (id, name, email, password, phone, location, rating, reviews(use oddjob id for title of review))
+- odd_jobs: (id, user_id(fk), title, type, pay_rate, start_time, end_time, location, date, active(BOOLEAN), image_url) (\*\*also look into using an eventlistener onclick to hide job button and change colour)
+- Maps (id, user_id(fk), odd_id(fk), start_location, information/details) \*\* possibly need to hold information for global oddjob maps with all listings and also user created favourite maps.
+
+WARREN [ ]
 
 ## Routes
 
-- **_C_** - POST /jobseekers
-- **_R_** - GET /jobseekers/:id
-- **_U_** - POST /jobseekers/:id
-- **_D_** - DELETE /jobseekers/:id
+- **_B(browse)_** - GET /users
+- **_R(read)_** - GET /users/:id
+- **_E(edit)_** - POST /users/:id
+- **_A(add)_** - POST /users
+- **_D(delete)_** - POST /users/:id/delete
 
-#
+- **_B(browse)_** - GET /oddjobs
+- **_R(read)_** - GET /oddjobs/:id
+- **_E(edit)_** - POST /oddjobs/:id
+- **_A(add)_** - POST /oddjobs
+- **_D(delete)_** - POST /oddjobs/:id/delete
 
-- **_C_** - POST /employers
-- **_R_** - GET /employers/:id
-- **_U_** - POST /employers/:id
-- **_D_** - DELETE /employers/:id
+- **_B(browse)_** - GET /maps
+- **_R(read)_** - GET /maps/:id
+- **_E(edit)_** - POST /maps/:id
+- **_A(add)_** - POST /maps
+- **_D(delete)_** - POST /maps/:id/delete
 
-#
-
-- **_C_** - POST /oddjobs
-- **_R_** - GET /oddjobs/:id
-- **_U_** - POST /oddjobs/:id
-- **_D_** - DELETE /oddjobs/:id
-
-#
-
-- **_C_** - POST /maps
-- **_R_** - GET /maps/:id
-- **_U_** - POST /maps/:id
-- **_D_** - DELETE /maps/:id
+WARREN [ ]
 
 ## Wireframe
 
